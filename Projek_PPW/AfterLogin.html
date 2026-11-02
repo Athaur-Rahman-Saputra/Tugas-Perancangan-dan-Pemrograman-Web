@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Perpustakaan Baca Siswa</title>
+    <link rel="icon" type="image/png" href="Logo1.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Baca Siswa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="AfterLogin.css">
+</head>
+<body>
+
+    <input type="checkbox" id="sidebar-toggle" class="sakelar-menu-samping">
+
+    <header class="bilah-navigasi-atas">
+        <div class="area-logo-perpus">
+        <img src="LogoPerpusNoBG.png" alt="Logo Perpustakaan" class="gambar-logo">
+    </div>
+        <div class="menu-profil-pengguna">
+            <div class="informasi-pengguna">
+                <span class="teks-selamat-datang">Welcome,</span>
+                <span class="nama-pengguna">ATHAUR RAHMAN SAPUTRA</span>
+            </div>
+            <i class="fa-solid fa-caret-down ikon-panah-bawah"></i>
+        </div>
+    </header>
+
+    <div class="tata-letak-utama">
+        
+        <aside class="menu-samping" id="sidebar">
+            <nav class="navigasi-samping">
+                <ul class="daftar-menu">
+                    <li class="item-menu active">
+                        <a href="#home" class="tautan-menu">
+                            <span class="teks-menu">Home</span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#ubah-password" class="tautan-menu">      
+                            <span class="teks-menu">Ubah Password</span>
+                        </a>
+                    </li>
+                    <li class="item-menu punya-sub-menu">
+                        <a href="#kemahasiswaan" class="tautan-menu">
+                            <span class="teks-menu">Katalog Buku</span>  
+                        </a>
+                    </li>
+                    <li class="item-menu punya-sub-menu">
+                        <a href="#pertukaran-mhs" class="tautan-menu">
+                            <span class="teks-menu">Koleksi Digital</span>
+                        </a>
+                    </li>
+                    <li class="item-menu punya-sub-menu">
+                        <a href="#akademik" class="tautan-menu">
+                            <span class="teks-menu">Buku Favorit</span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#status-pembayaran" class="tautan-menu">
+                            <span class="teks-menu">Riwayat Sirkulasi</span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#pendaftaran-pkm" class="tautan-menu">
+                            <span class="teks-menu">Kartu Anggota</span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#kalender-akademik" class="tautan-menu">
+                            <span class="teks-menu">Layanan & Fasilitas</span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="logout.php" class="tautan-menu" style="color: #C86D51; font-weight: 700;">
+                            <span class="teks-menu"><i class="fa-solid fa-right-from-bracket"></i> Keluar (Logout)</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="area-lipat-samping">
+                <label for="sidebar-toggle" class="tombol-lipat" title="Toggle Sidebar">
+                    <i class="fa-solid fa-angles-left ikon-lipat-kiri"></i>
+                    <i class="fa-solid fa-angles-right ikon-lipat-kanan"></i>
+                </label>
+            </div>
+        </aside>
+
+        <main class="konten-utama">
+            <div class="wadah-jejak-halaman">
+                <a href="#home" class="tautan-jejak-halaman">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home &gt;</span>
+                </a>
+            </div>
+
+            <section class="banner-selamat-datang">
+                <div class="isi-banner">
+                    <span class="subjudul-banner">SELAMAT DATANG</span>
+                    <h1 class="judul-banner">ATHAUR RAHMAN SAPUTRA</h1>
+                    <p class="deskripsi-banner">
+                        Selamat datang di Portal Perpustakaan Baca Siswa. Jelajahi koleksi buku dan referensi digital kami.
+                    </p>
+                </div>
+            </section>
+
+            <section class="grid-statistik">
+                <div class="kartu-statistik">
+                    <span class="label-statistik">Kunjungan Perpustakaan</span>
+                    <div class="nilai-statistik">0</div>
+                </div>
+                <div class="kartu-statistik">
+                    <span class="label-statistik">Peminjaman Buku Sekarang</span>
+                    <div class="nilai-statistik">0</div>
+                </div>
+                <div class="kartu-statistik">
+                    <span class="label-statistik">Total Buku Yang Pernah Terpinjam</span>
+                    <div class="nilai-statistik">0</div>
+                </div>
+                <div class="kartu-statistik">
+                    <span class="label-statistik">Point Member Perpustakaan</span>
+                    <div class="nilai-statistik">0</div>
+                </div>
+            </section>
+
+            <section class="pembungkus-katalog-utama">
+                
+                <div class="header-bagian-katalog">
+                    <div class="lencana-katalog">
+                        <i class="fa-solid fa-book-bookmark"></i> Rekomendasi Literasi & Katalog Digital Mahasiswa
+                    </div>
+                    <h2 class="judul-bagian-besar">Katalog Pustaka & Buletin Akademik</h2>
+                </div>
+
+                <div class="bagian-banner-geser">
+                    <input type="radio" name="hero-carousel" id="slide-radio-1" class="pilihan-slide" checked>
+                    <input type="radio" name="hero-carousel" id="slide-radio-2" class="pilihan-slide">
+                    <input type="radio" name="hero-carousel" id="slide-radio-3" class="pilihan-slide">
+                    <input type="radio" name="hero-carousel" id="slide-radio-4" class="pilihan-slide">
+
+                    <div class="area-tampil-slide">
+                        <div class="pembungkus-semua-slide">
+                            
+                            <div class="item-slide slide-1">
+                                <div class="grid-banner">
+                                    <article class="kartu-banner banner-laskar-pelangi">
+                                        <div class="latar-banner latar-laskar">
+                                            <div class="gambar-art-laskar">
+                                                <img src="https://static.mizanstore.com/d/img/book/cover/covFL-12.jpg" class="gambar-laskar">
+                                            </div>
+                                            <div class="teks-atas-banner">
+                                                <h3 class="judul-artistik">Laskar Pelangi</h3>
+                                                <p class="subjudul-artistik">Kisah inspiratif sepuluh anak Belitung <br>melawan keterbatasan demi <br>sekolah dan mimpi.</p>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Karya Andrea Hirata yang diterbitkan oleh Bentang Pustaka.</span>
+                                        </div>
+                                    </article>
+
+                                    <article class="kartu-banner banner-ulasan-buku">
+                                        <div class="latar-banner latar-ulasan-buku">
+                                            <div class="tata-letak-ulasan">
+                                                <div class="tampilan-buku-ulasan">
+                                                    <div class="poster-buku-kecil">
+                                                        <div class="judul-poster-atas">LOVE LETTERS<br>TO THE<br>DEAD</div>
+                                                        <div class="sampul-kecil">
+                                                            <span>LOVE LETTERS TO THE DEAD</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="teks-samping-ulasan">
+                                                    <span class="label-ulasan">Reviu Buku</span>
+                                                    <span class="penulis-ulasan">AVA DELLAIRA</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Reviu Buku Love lettres to the dead</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="item-slide slide-2">
+                                <div class="grid-banner">
+                                    <article class="kartu-banner banner-negeri-5-menara">
+                                        <div class="latar-banner latar-negeri-5-menara">
+                                            <div class="gambar-art-negeri">  
+                                                <img src="https://cdn.gramedia.com/uploads/items/9786020633176_.Atomic_Habit.jpg"  class="gambar-sampul-negeri">
+                                            </div>
+                                            <div class="teks-atas-banner">
+                                                <h3 class="judul-artistik">Negeri 5 Menara</h3>
+                                                <p class="subjudul-artistik">Perjuangan enam santri Pondok Madani <br>menggapai mimpi dunia lewat mantra <br>"Man Jadda Wajada".</p>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Karya Ahmad Fuadi (A. Fuadi) dan diterbitkan pertama kali pada bulan Agustus 2009 oleh penerbit Gramedia Pustaka Utama.</span>
+                                        </div>
+                                    </article>
+
+                                    <article class="kartu-banner banner-bumi-manusia">
+                                        <div class="latar-banner latar-bumi-manusia">
+                                            <div class="tata-letak-ulasan">
+                                                <div class="tampilan-buku-ulasan">
+                                                    <div class="poster-buku-kecil">
+                                                        <div class="judul-poster-atas">BUMI<br>MANUSIA</div>
+                                                        <div class="sampul-kecil sampul-bumi-manusia">
+                                                            <span>BUMI MANUSIA</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="teks-samping-ulasan">
+                                                    <span class="label-ulasan">Kajian Sastra</span>
+                                                    <span class="penulis-ulasan">PRAMOEDYA ANANTA TOER</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Bedah Karya Sastra: Menyelami Sejarah dan Jiwa Kebangsaan</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="item-slide slide-3">
+                                <div class="grid-banner">
+                                    <article class="kartu-banner banner-sapiens">
+                                        <div class="latar-banner latar-sapiens">
+                                            <div class="gambar-art-sapiens">
+                                                <img src="https://cdn.gramedia.com/uploads/items/591701404_sapiens.jpg" class="gambar-sampul-sapiens">
+                                            </div>
+                                            <div class="teks-atas-banner">
+                                                <h3 class="judul-artistik">Sapiens</h3>
+                                                <p class="subjudul-artistik">Kisah evolusi manusia purba <br>dari sekadar hewan biasa menjadi <br>penguasa bumi lewat kekuatan mitos.</p>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Diterbitkan oleh penerbit Kepustakaan Populer Gramedia (KPG) pada bulan September 2017.</span>
+                                        </div>
+                                    </article>
+
+                                    <article class="kartu-banner banner-festival-literasi">
+                                        <div class="latar-banner latar-festival">
+                                            <div class="art-pohon-festival">
+                                                <svg viewBox="0 0 160 160" class="svg-pohon">
+                                                    <path d="M76 130 L76 75 C76 60 84 60 84 75 L84 130 Z" fill="#5c4033"/>
+                                                    <circle cx="80" cy="55" r="32" fill="#2d4a3e" opacity="0.9"/>
+                                                    <circle cx="62" cy="62" r="24" fill="#a8cfbe" opacity="0.85"/>
+                                                    <circle cx="98" cy="62" r="24" fill="#c86d51" opacity="0.85"/>
+                                                    <path d="M60 130 Q80 120 100 130 Z" fill="#c86d51"/>
+                                                </svg>
+                                            </div>
+                                            <div class="teks-atas-banner">
+                                                <h3 class="judul-artistik">FESTIVAL</h3>
+                                                <p class="subjudul-artistik">Gerakan Membaca<br>Semangat Literasi<br>Generasi Emas</p>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Festival Literasi Nusantara 2026: Membaca untuk Masa Depan Bangsa</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="item-slide slide-4">
+                                <div class="grid-banner">
+                                    <article class="kartu-banner banner-preservasi-naskah">
+                                        <div class="latar-banner latar-preservasi">
+                                            <div class="art-pemugaran">
+                                                <svg viewBox="0 0 160 160" class="svg-pemugaran">
+                                                    <rect x="35" y="40" width="90" height="80" rx="6" fill="#eadeca" stroke="#2d4a3e" stroke-width="2"/>
+                                                    <circle cx="80" cy="80" r="26" fill="none" stroke="#c86d51" stroke-width="3"/>
+                                                    <line x1="98" y1="98" x2="125" y2="125" stroke="#c86d51" stroke-width="5" stroke-linecap="round"/>
+                                                    <line x1="50" y1="60" x2="110" y2="60" stroke="#8d6e63" stroke-width="2"/>
+                                                    <line x1="50" y1="75" x2="110" y2="75" stroke="#8d6e63" stroke-width="2"/>
+                                                    <line x1="50" y1="90" x2="110" y2="90" stroke="#8d6e63" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="teks-atas-banner">
+                                                <h3 class="judul-artistik">PRESERVASI</h3>
+                                                <p class="subjudul-artistik">Laboratorium<br>Konservasi Naskah<br>Kuno Bersejarah</p>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Restorasi Koleksi Langka: Merawat Dokumen Bangsa Sejak Abad ke-16</span>
+                                        </div>
+                                    </article>
+
+                                    <article class="kartu-banner banner-komik-pahlawan">
+                                        <div class="latar-banner latar-komik">
+                                            <div class="tata-letak-ulasan">
+                                                <div class="tampilan-buku-ulasan">
+                                                    <div class="kotak-komik-banner">
+                                                        <span class="teks-komik-atas">KOMIK</span>
+                                                        <span class="teks-komik-tengah">SEJARAH</span>
+                                                        <span class="teks-komik-bawah">PAHLAWAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="teks-samping-ulasan">
+                                                    <span class="label-ulasan">Koleksi Edukasi</span>
+                                                    <span class="penulis-ulasan">Kisah Juang Pejuang Bangsa</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lencana-bawah-banner">
+                                            <span>Serial Komik Anak Nusantara: Belajar Sejarah Lewat Narasi Kreatif</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div> 
+
+                        </div> 
+                    </div> 
+
+                    <div class="kontrol-navigasi-slide">
+                        <div class="tombol-navigasi-slide control-1">
+                            <label for="slide-radio-4" class="panah-slide panah-sebelumnya" title="Ke Slide 4">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </label>
+                            <label for="slide-radio-2" class="panah-slide panah-selanjutnya" title="Ke Slide 2">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </label>
+                        </div>
+                        <div class="tombol-navigasi-slide control-2">
+                            <label for="slide-radio-1" class="panah-slide panah-sebelumnya" title="Ke Slide 1">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </label>
+                            <label for="slide-radio-3" class="panah-slide panah-selanjutnya" title="Ke Slide 3">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </label>
+                        </div>
+                        <div class="tombol-navigasi-slide control-3">
+                            <label for="slide-radio-2" class="panah-slide panah-sebelumnya" title="Ke Slide 2">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </label>
+                            <label for="slide-radio-4" class="panah-slide panah-selanjutnya" title="Ke Slide 4">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </label>
+                        </div>
+                        <div class="tombol-navigasi-slide control-4">
+                            <label for="slide-radio-3" class="panah-slide panah-sebelumnya" title="Ke Slide 3">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </label>
+                            <label for="slide-radio-1" class="panah-slide panah-selanjutnya" title="Ke Slide 1">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="titik-indikator-slide">
+                        <label for="slide-radio-1" class="titik dot-1" title="Buka Slide 1"></label>
+                        <label for="slide-radio-2" class="titik dot-2" title="Buka Slide 2"></label>
+                        <label for="slide-radio-3" class="titik dot-3" title="Buka Slide 3"></label>
+                        <label for="slide-radio-4" class="titik dot-4" title="Buka Slide 4"></label>
+                    </div>
+
+                    <div class="petunjuk-posisi-slide">
+                        <span class="lencana-petunjuk-slide ind-1">
+                            <i class="fa-solid fa-circle-info"></i> Sedang di slide 1 dari 4
+                        </span>
+                        <span class="lencana-petunjuk-slide ind-2">
+                            <i class="fa-solid fa-circle-info"></i> Sedang di slide 2 dari 4
+                        </span>
+                        <span class="lencana-petunjuk-slide ind-3">
+                            <i class="fa-solid fa-circle-info"></i> Sedang di slide 3 dari 4
+                        </span>
+                        <span class="lencana-petunjuk-slide ind-4">
+                            <i class="fa-solid fa-circle-info"></i> Sedang di slide 4 dari 4
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bagian-konten bagian-katalog-buku">
+                    <div class="header-bagian">
+                        <h3 class="judul-bagian">Rekomendasi Buku Akademik</h3>
+                        <a href="#rekomendasi" class="tautan-selengkapnya">Selengkapnya</a>
+                    </div>
+
+                    <div class="grid-buku">
+                        <div class="item-buku">
+                            <div class="sampul-buku sampul-the-good-son">
+                                <div class="tag-atas-sampul">종합 베스트</div>
+                                <div class="judul-tengah-sampul">THE<br>GOOD<br>SON</div>
+                                <div class="penulis-bawah-sampul">JEONG YOU-JEONG</div>
+                                <div class="lencana-penghargaan">#1</div>
+                            </div>
+                            <div class="info-buku">
+                                <h4 class="judul-buku" title="Anak Teladan - The Good Son">Anak Teladan - Th...</h4>
+                                <p class="penulis-buku">Jeong You-Jeong</p>
+                            </div>
+                        </div>
+
+                        <div class="item-buku">
+                            <div class="sampul-buku sampul-pemasaran">
+                                <div class="pita-atas-sampul">Buku Ajar</div>
+                                <div class="judul-biru-sampul">Manajemen<br>Pemasaran</div>
+                                <div class="grafik-ikon-sampul">
+                                    <i class="fa-solid fa-laptop"></i>
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="info-buku">
+                                <h4 class="judul-buku" title="Manajemen Pemasaran">Manajemen Pemas...</h4>
+                                <p class="penulis-buku">Melati</p>
+                            </div>
+                        </div>
+
+                        <div class="item-buku">
+                            <div class="sampul-buku sampul-metode-kuantitatif">
+                                <div class="penulis-kecil-sampul">Dr. Adhi Kusumastuti, S.T., M.T.<br>Ahmad Mustamil Khoiron, M.Pd.</div>
+                                <div class="judul-sian-sampul">Metode<br><span>PENELITIAN</span><br>KUANTITATIF</div>
+                                <div class="dekorasi-diagram-sampul">
+                                    <div class="batang-diagram c1"></div>
+                                    <div class="batang-diagram c2"></div>
+                                    <div class="batang-diagram c3"></div>
+                                </div>
+                            </div>
+                            <div class="info-buku">
+                                <h4 class="judul-buku" title="Metode Penelitian Kuantitatif">Metode Penelitian ...</h4>
+                                <p class="penulis-buku">Adhi Kusumastuti, Ahma...</p>
+                            </div>
+                        </div>
+
+                        <div class="item-buku">
+                            <div class="sampul-buku sampul-pengantar-metode">
+                                <div class="ikon-cokelat-sampul">
+                                    <i class="fa-solid fa-feather-pointed"></i>
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <div class="judul-cokelat-sampul">
+                                    <span class="sub-judul-lead">PENGANTAR</span><br>
+                                    Metode<br>Penelitian
+                                </div>
+                                <div class="penulis-cokelat-sampul">Maryam B. Gainau</div>
+                            </div>
+                            <div class="info-buku">
+                                <h4 class="judul-buku" title="Pengantar Metode Penelitian">Pengantar Metode...</h4>
+                                <p class="penulis-buku">Maryam B. Gainau</p>
+                            </div>
+                        </div>
+
+                        <div class="item-buku">
+                            <div class="sampul-buku sampul-metodologi">
+                                <div class="penulis-atas-sampul">Mayang Sari Lubis, S.Pd., M.A.</div>
+                                <div class="judul-gelap-sampul">METODOLOGI<br>PENELITIAN</div>
+                                <div class="seni-ikon-sampul">
+                                    <i class="fa-solid fa-book-open-reader"></i>
+                                </div>
+                            </div>
+                            <div class="info-buku">
+                                <h4 class="judul-buku" title="Metodologi Penelitian">Metodologi Peneli...</h4>
+                                <p class="penulis-buku">Mayang Sari Lubis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bagian-konten bagian-katalog-epustaka">
+                    <div class="header-bagian">
+                        <h3 class="judul-bagian">ePustaka & Referensi Digital</h3>
+                        <a href="#epustaka" class="tautan-selengkapnya">Selengkapnya</a>
+                    </div>
+
+                    <div class="grid-epustaka">
+                        <div class="kartu-epustaka">
+                            <div class="logo-epustaka logo-naskah-kuno">
+                                <svg viewBox="0 0 100 100" class="svg-logo-naskah">
+                                    <path d="M20 15 L35 15 L35 85 L20 85 Z" fill="#2d4a3e"/>
+                                    <path d="M40 50 L75 15 C85 25 85 35 60 50 Z" fill="#c86d51"/>
+                                    <path d="M40 50 L80 85 C85 75 75 60 55 50 Z" fill="#2d4a3e"/>
+                                </svg>
+                            </div>
+                            <span class="judul-epustaka">Pustaka Naskah Kuno</span>
+                        </div>
+
+                        <div class="kartu-epustaka">
+                            <div class="logo-epustaka logo-komik-nusantara">
+                                <div class="kotak-komik">
+                                    <span class="teks-komik-atas">KOMIK</span>
+                                    <span class="teks-komik-tengah">NASKAH</span>
+                                    <span class="teks-komik-bawah">NUSANTARA</span>
+                                </div>
+                            </div>
+                            <span class="judul-epustaka">Komik Naskah Nusantara</span>
+                        </div>
+
+                        <div class="kartu-epustaka">
+                            <div class="logo-epustaka logo-buletin">
+                                <div class="sampul-mini-buletin">
+                                    <div class="kepala-buletin">LEMBARAN</div>
+                                    <div class="foto-buletin">
+                                        <div class="gambar-b"></div>
+                                        <div class="gambar-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="judul-epustaka">Buletin Layanan Pustaka</span>
+                        </div>
+
+                        <div class="kartu-epustaka">
+                            <div class="logo-epustaka logo-perpusnas-press">
+                                <svg viewBox="0 0 100 100" class="svg-bintang-press">
+                                    <path d="M50 10 L62 38 L92 38 L68 56 L77 86 L50 68 L23 86 L32 56 L8 38 L38 38 Z" fill="#2d4a3e"/>
+                                    <path d="M50 10 L62 38 L50 68 Z" fill="#c86d51"/>
+                                </svg>
+                                <span class="teks-press">PERPUSNAS<br><strong>PRESS</strong></span>
+                            </div>
+                            <span class="judul-epustaka">Perpusnas Press</span>
+                        </div>
+
+                        <div class="kartu-epustaka">
+                            <div class="logo-epustaka logo-buletin-marun">
+                                <div class="kotak-sampul-marun">
+                                    <span>BU...</span>
+                                </div>
+                            </div>
+                            <span class="judul-epustaka">Buletin Arsip</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 48%;
+    min-height: 100vh;
+    background: #2D4A3E;
+    -webkit-clip-path: url(#sidebar-curve);
+    clip-path: url(#sidebar-curve);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px;
+    z-index: 10;
+}
+
+.sidebar-illustration-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    margin-right: 14%;
+}
+
+.building-illustration,
+.sidebar-logo-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(15, 10, 45, 0.35);
+    background-color: #ffffff;
+    padding: 20px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-logo-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(15, 10, 45, 0.45);
+}
+
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.carousel-dots .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-dots .dot:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.carousel-dots .dot.active {
+    background-color: #ffffff;
+    width: 22px;
+    border-radius: 4px;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+    padding: 35px 30px;
+    z-index: 2;
+}
+
+.login-header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.login-logo-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.btn-sso {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    padding: 11px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-sso:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.sso-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sso-icon svg,
+.sso-icon img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e5e7eb;
+    z-index: 1;
+}
+
+.divider span {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    padding: 0 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 38px 10px 14px;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.input-wrapper input:focus {
+    border-color: #4355b9;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(67, 85, 185, 0.1);
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 14px;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin: 10px 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #2D4A3E;
+    color: #ffffff;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-submit a{
+    text-decoration: none;
+
+}
+
+.btn-submit:hover {
+    background-color: #364499;
+    text-decoration: none;
+}
+
+.btn-submit:active {
+    transform: scale(0.99);
+}
+
+.btn-secondary a{
+    text-decoration: none;
+
+}
+
+.btn-secondary {
+    margin-top: 12px;
+    background-color: #ffffff;
+    color: #4355b9;
+    border: 1px solid #4355b9;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f3ff;
+    text-decoration: none;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.forgot-password a {
+    color: #4355b9;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.forgot-password a:hover {
+    color: #2b3980;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: 280px;
+        padding: 30px 20px;
+        -webkit-clip-path: none;
+        clip-path: none;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+
+    .sidebar-illustration-wrapper {
+        margin-right: 0;
+        max-width: 260px;
+    }
+
+    .building-illustration,
+    .sidebar-logo-img {
+        max-width: 240px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .login-card {
+        box-shadow: none;
+        padding: 10px;
+    }
+}

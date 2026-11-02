@@ -1,0 +1,180 @@
+:root {
+  --warna-latar:      #F4F1EA;   
+  --warna-kartu:      #FFFFFF;   
+  --warna-teks:       #2C302E;   
+  --warna-teks-halus: #66706A;   
+  --warna-utama:      #2D4A3E;   
+  --warna-utama-gelap:#2C302E;   
+  --warna-aksen:      #C86D51;   
+  --warna-garis:      #E2DDD2;   
+  --teks-tombol:      #FFFFFF;   
+
+  --panel-hijau:      #2D4A3E;   
+  --panel-teks:       #F4F1EA;   
+  --panel-teks-halus: #C3C9C4;   
+  --latar-logo:       #FFFFFF;   
+
+  --ukuran-logo: 96px;           
+  --radius: 14px;
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --warna-latar:      #2C302E;
+    --warna-kartu:      #2D4A3E;
+    --warna-teks:       #F4F1EA;
+    --warna-teks-halus: #C3C9C4;
+    --warna-utama:      #F4F1EA;
+    --warna-utama-gelap:#FFFFFF;
+    --warna-aksen:      #C86D51;
+    --warna-garis:      #46604F;
+    --teks-tombol:      #2D4A3E;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--warna-latar);
+  color: var(--warna-teks);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-atas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+}
+.bar-atas .merek { font-weight: 800; letter-spacing: -0.01em; }
+.bar-atas nav { display: flex; gap: 20px; }
+.bar-atas nav a {
+  color: var(--warna-teks-halus);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.bar-atas nav a:hover {
+  color: var(--warna-utama);
+  text-decoration: underline;
+  text-decoration-color: var(--warna-aksen);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.kartu {
+  width: 100%;
+  max-width: 420px;
+  background: var(--panel-hijau);
+  border: 1px solid var(--warna-garis);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  border-top: 4px solid var(--warna-aksen);
+  box-shadow: 0 18px 40px -24px rgba(44, 48, 46, 0.35);
+}
+
+
+.kartu-atas {
+  background: var(--latar-logo);
+  padding: 32px 32px 28px;
+}
+.kartu-bawah {
+  background: var(--panel-hijau);
+  color: var(--panel-teks);
+  padding: 28px 32px 32px;
+}
+
+.area-logo {
+  width: var(--ukuran-logo);
+  height: var(--ukuran-logo);
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.area-logo img {
+  max-width: 150%;
+  max-height: 150%;
+  object-fit: contain;
+  display: block;
+}
+
+h1 {
+  margin: 0 0 6px;
+  color: var(--panel-teks);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.tagline {
+  margin: 0 0 28px;
+  color: var(--panel-teks-halus);
+  font-size: 0.98rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid var(--warna-utama);
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-utama { background: var(--panel-teks); color: var(--panel-hijau); border-color: var(--panel-teks); }
+.btn-utama:hover { background: #FFFFFF; border-color: #FFFFFF; }
+.btn-garis { background: transparent; color: var(--panel-teks); border-color: var(--panel-teks); }
+.btn-garis:hover { background: var(--panel-teks); color: var(--panel-hijau); }
+.btn + .btn { margin-top: 12px; }
+.btn:focus-visible, a:focus-visible {
+  outline: 3px solid var(--warna-aksen);
+  outline-offset: 2px;
+}
+.kartu-bawah .btn:focus-visible, .kartu-bawah a:focus-visible {
+  outline-color: var(--panel-teks);
+}
+
+.catatan {
+  margin: 22px 0 0;
+  font-size: 0.82rem;
+  color: var(--panel-teks-halus);
+}
+.catatan a { color: inherit; }
+
+
+footer {
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--warna-teks-halus);
+}
+footer a { color: inherit; margin: 0 8px; }
+
+
+@media (max-width: 480px) {
+  .bar-atas { padding: 14px 16px; }
+  .bar-atas nav { gap: 14px; }
+  .kartu-atas { padding: 26px 22px 22px; }
+  .kartu-bawah { padding: 24px 22px 24px; }
+}

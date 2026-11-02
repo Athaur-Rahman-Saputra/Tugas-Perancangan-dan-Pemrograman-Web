@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.Kiri-section {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    z-index: 2;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 390px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.logo-img {
+    max-width: 165px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.Head-Daftar {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3b3b3b;
+    margin-bottom: 16px;
+}
+
+.Pendaftaran {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.input-row {
+    display: flex;
+    gap: 14px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 13px;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #a6a6a6;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #3558b6;
+    box-shadow: 0 0 0 2px rgba(53, 88, 182, 0.1);
+}
+
+.Input Password {
+    padding-right: 36px;
+}
+
+
+.Syarat {
+    font-size: 11.5px;
+    color: #8c8c8c;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.Syarat a {
+    color: #2b57b5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #8c8c8c;
+}
+
+.Syarat a:hover {
+    text-decoration: underline;
+}
+
+.Tombol-daftar {
+    width: 100%;
+    height: 40px;
+    background-color: #2D4A3E;
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    padding: 0 15px;
+    margin-bottom: 10px;
+
+}
+
+.Tombol-daftar a{
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.Tombol-daftar:hover {
+    background-color: #244394;
+    text-decoration: none;
+}
+
+
+
+.Tombol-SPA {
+    width: 100%;
+    height: 40px;
+    background-color: #2D4A3E;
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.Tombol-SPA a{
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.Tombol-SPA:hover {
+    background-color: #244394;
+    text-decoration: none;
+    
+}
+
+.Kanan-section {
+    width: 52%;
+    min-height: 900px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Kanan-section img {
+    position: absolute;
+    top: -25vh;
+    left: 0;
+    width: 2784px;
+    height: 1485px;
+    border-bottom-left-radius: 55% 85%;
+    border-top-left-radius: 15% 40%;
+
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 8%;
+}
+
+.banner-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: 0.2px;
+}
+
+.illustration-box {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 960px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .Kanan-section {
+        width: 100%;
+    }
+
+    .Kanan-section {
+        min-height: 480px;
+        padding: 50px 20px;
+    }
+
+    .Kanan-section::before {
+        top: 0;
+        left: -20vw;
+        width: 140vw;
+        height: 120%;
+        border-radius: 50% 50% 0 0 / 25% 25% 0 0;
+    }
+
+    .banner-content {
+        margin-left: 0;
+    }
+}

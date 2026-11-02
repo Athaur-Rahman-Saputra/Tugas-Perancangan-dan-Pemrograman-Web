@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Baca Siswa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position: absolute; pointer-events: none;">
+        <defs>
+            <clipPath id="sidebar-curve" clipPathUnits="objectBoundingBox">
+                <path d="M 0,0 L 0.96,0 C 1.04,0.22 0.88,0.62 0.54,1 L 0,1 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-illustration-wrapper">
+                <img src="LogoPerpusSetengahLingkaran.jpeg" alt="Perpustakaan Baca Siswa" class="sidebar-logo-img">
+
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="login-card">
+                <div class="login-header-logo">
+                    <a href="index.php">
+                        <img src="LogoPerpusNoBG (1).png" alt="Perpustakaan Baca Siswa" class="login-logo-img">
+                    </a>
+                </div>
+
+                <button type="button" class="btn-sso">
+                    <div class="sso-icon">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" width="20" height="20">
+                    </div>
+                    Masuk dengan akun Google
+                </button>
+
+                <div class="divider">
+                    <span>ATAU LOGIN MANUAL</span>
+                </div>
+
+                <form action="proses_login.php" method="POST">
+                    <div class="form-group">
+                        <label for="username">Email / Nama Lengkap</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="username" name="username" placeholder="Masukkan Email yang didaftarkan" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+                            <i class="fa-solid fa-lock" id="togglePassword"></i>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-key"></i> Masuk
+                    </button>
+
+                    <a href="register.php" class="btn-submit btn-secondary" style="text-decoration: none;">
+                        <i class="fa-solid fa-user-plus"></i> Belum Memiliki Akun
+                    </a>
+                </form>
+
+                <div class="forgot-password">
+                    <a href="#"><i class="fa-regular fa-circle-question"></i> Lupa Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

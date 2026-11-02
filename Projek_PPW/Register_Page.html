@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Perpustakaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+    <div class="page-wrapper">
+       
+        <main class="Kiri-section">
+            <div class="form-container">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="LogoPerpus.png" alt="Logo Perpustakaan" class="logo-img">
+                    </a>
+                </div>
+
+                <h1 class="Head-Daftar">Daftar</h1>
+
+
+                <form action="proses_register.php" method="POST" class="Pendaftaran">
+                    
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="konfirmasi_password" placeholder="Konfirmasi password" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" name="no_ponsel" placeholder="Nomor ponsel" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="alamat" placeholder="Alamat sesuai KTP" required>
+                    </div>
+
+                    <p class="Syarat">
+                        Dengan mendaftar, saya menyetujui <a href="#">Syarat dan Ketentuan</a> serta <a href="#">Kebijakan Privasi.</a>
+                    </p>
+                
+                    <button type="submit" class="Tombol-daftar">Daftar</button>
+                    
+                </form>
+                <a href="login.php" style="text-decoration: none;">
+                    <button type="button" class="Tombol-SPA">Sudah Punya Akun</button>
+                </a>
+            </div>
+        </main>
+
+        <aside class="Kanan-section">
+            <img src="https://i.pinimg.com/originals/a5/cc/b1/a5ccb14345594e3863477412f648f004.jpg" alt="Ilustrasi Perpustakaan">
+            <div class="banner-content">
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
